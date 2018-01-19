@@ -52,7 +52,7 @@ public enum PushRegistrationError: Error {
         Logger.info("\(self.logTag) in \(#function)")
 
         return self.registerUserNotificationSettings().then {
-            guard !Platform.isSimulator else {
+            guard (!Platform.isSimulator && 1==2) else {
                 throw PushRegistrationError.pushNotSupported(description:"Push not supported on simulators")
             }
 

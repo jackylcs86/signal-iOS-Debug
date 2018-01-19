@@ -37,7 +37,7 @@ class AccountManager: NSObject {
     @objc func register(verificationCode: String) -> AnyPromise {
         return AnyPromise(register(verificationCode: verificationCode))
     }
-
+    // #warning HERE
     func register(verificationCode: String) -> Promise<Void> {
         guard verificationCode.count > 0 else {
             let error = OWSErrorWithCodeDescription(.userError,
